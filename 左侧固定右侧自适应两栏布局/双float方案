@@ -1,0 +1,23 @@
+.wrapper-double-float {
+    overflow: auto;		// 清除浮动
+    box-sizing: content-box;
+}
+
+.wrapper-double-float .left,
+.wrapper-double-float .right {
+    float: left;
+    box-sizing: border-box;
+}
+
+.wrapper-double-float .right {
+    width: calc(100% - 140px);
+}
+
+/*
+本方案和双inline-block方案原理相同，都是通过动态计算宽度来实现自适应。但是，
+由于浮动的block元素在有空间的情况下会依次紧贴，排列在一行，所以无需设置display: inline-block;，自然也就少了顶端对齐，空格字符占空间等问题。
+不过由于应用了浮动，父元素需要清除浮动。(负责撑不开) 
+缺点:
+需要知道左侧盒子的宽度，两个盒子的距离，还要设置各个元素的box-sizing。
+父元素需要清除浮动。
+*/

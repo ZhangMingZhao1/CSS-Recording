@@ -1,0 +1,21 @@
+.wrapper-float-bfc {
+    overflow: auto;
+}
+
+.wrapper-float-bfc .left {
+    float: left;
+    margin-right: 20px;
+}
+
+.wrapper-float-bfc .right {
+    margin-left: 0;
+    overflow: auto;
+}
+
+/*
+上面的方法都需要通过左侧盒子的宽度，计算某个值，下面三种方法都是不需要计算的。只需要设置两个盒子之间的间隔。
+这个方案同样是利用了左侧浮动，但是右侧盒子通过overflow: auto;形成了BFC，因此右侧盒子不会与浮动的元素重叠。
+这种情况下，只需要为左侧的浮动盒子设置margin-right，就可以实现两个盒子的距离了。而右侧盒子是block级别的，所以宽度能实现自适应。
+ 缺点:
+父元素需要清除浮动
+*/

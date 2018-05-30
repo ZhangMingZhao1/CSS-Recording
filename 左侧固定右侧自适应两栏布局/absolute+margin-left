@@ -1,0 +1,12 @@
+.wrapper-absolute .left {
+    position: absolute;
+}
+
+.wrapper-absolute .right {
+    margin-left: 150px;
+}
+
+/*
+使用了绝对定位，若是用在某个div中，需要更改父容器的position。
+没有清除浮动的方法，若左侧盒子高于右侧盒子，就会超出父容器的高度。因此只能通过设置父容器的min-height来放置这种情况。
+*/

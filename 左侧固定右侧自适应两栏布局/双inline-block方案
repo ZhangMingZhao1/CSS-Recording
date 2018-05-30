@@ -1,0 +1,22 @@
+.wrapper-inline-block {
+  box-sizing: content-box;
+  font-size: 0;	// 消除空格的影响
+}
+
+.wrapper-inline-block .left,
+.wrapper-inline-block .right {
+  display: inline-block;
+  vertical-align: top;	// 顶端对齐
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.wrapper-inline-block .right {
+  width: calc(100% - 140px);
+}
+
+/* 通过width: calc(100% - 140px)来动态计算右侧盒子的宽度，需要知道右侧盒子距离左边的距离，
+以及左侧盒子具体的宽度(content+padding+border)，以此计算父容器宽度的100%需要减去的数值。同时，还需要知道右侧盒子的宽度是否包含border的宽度。
+同时，作为两个inline-block的盒子，必须设置vertical-align来使其顶端对齐。 另外，为了准确地应用计算出来的宽度，
+需要消除div之间的空格，需要通过设置父容器的font-size: 0;,或者用注释消除html中的空格等方法。
+140px = 120px + 20px */

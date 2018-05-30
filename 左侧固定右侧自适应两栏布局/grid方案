@@ -1,0 +1,24 @@
+.wrapper-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: start;
+}
+
+.wrapper-grid .left,
+.wrapper-grid .right {
+    box-sizing: border-box;
+}
+
+.wrapper-grid .left {
+    grid-column: 1;
+}
+
+.wrapper-grid .right {
+    grid-column: 2;
+}
+
+/*
+grid布局也有列等高的默认效果。需要设置: align-items: start;。
+grid布局还有一个值得注意的小地方和flex不同:在使用margin-left的时候，
+grid布局默认是box-sizing设置的盒宽度之间的位置。而flex则是使用两个div的border或者padding外侧之间的距离。
+*/
