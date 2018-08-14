@@ -10,6 +10,8 @@
 .wrapper-flex .right {
     flex: 1 1 auto;
 }
+//flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+
 
 flex可以说是最好的方案了，代码少，使用简单。有朝一日，大家都改用现代浏览器，就可以使用了。 
 需要注意的是，flex容器的一个默认属性值:align-items: stretch;。这个属性导致了列等高的效果。 
